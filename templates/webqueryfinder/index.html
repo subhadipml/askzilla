@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Query Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="text-center">Query Finder - Web Application</h1>
+                <p class="text-center">Developed by <a href="https://www.linkedin.com/in/subhadipml/" target="_blank">Subhadip Mondal</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/search/" method="GET">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Enter Your Query..." name="query">
+                </div>
+                <button type="submit" class="btn btn-success btn-lg btn-block">Search</button>
+            </form>
+        </div>
+        <hr>
+        <div class="row">
+            {% if answer %}
+            <p class="text-secondary"><b>Your search : </b>{{query}}</p>
+            <p><b>Result : </b>{{answer}}</p>
+            <hr>
+            {% endif %}
+        </div>
+    </div> 
+</body>
+</html>
